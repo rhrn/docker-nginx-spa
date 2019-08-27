@@ -34,6 +34,6 @@ COPY --from=builder /app/public /usr/share/nginx/html
 * Build and run
 ```
 docker build -t my-spa-app .
-docker run --rm -p 8080:80 my-spa-app
+docker run --rm -p 8080:8080 my-spa-app
 open http://localhost:8080
 ```
