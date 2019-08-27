@@ -2,14 +2,14 @@
 
 ### examples
 
-* `Dockerfile` simple example 
+#### `Dockerfile` simple example 
 ```
 FROM rhrn/docker-nginx-spa
 
 COPY /app/public /usr/share/nginx/html
 ```
 
-* `Dockerfile` with builder example 
+#### `Dockerfile` with builder example 
 ```
 FROM node:8.9-alpine as builder
 
@@ -31,7 +31,7 @@ FROM rhrn/docker-nginx-spa
 COPY --from=builder /app/public /usr/share/nginx/html
 ```
 
-* Build and run
+#### Build and run
 ```
 docker build -t my-spa-app .
 docker run --rm -p 8080:8080 my-spa-app
